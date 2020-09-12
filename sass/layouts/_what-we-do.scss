@@ -1,0 +1,49 @@
+section.section-what-we-do {
+  padding-top: 0px;
+}
+
+.section-what-we-do {
+  @include for-size(phone-only) {
+    display: none;
+  }
+
+  @include for-size(tablet-portrait) {
+    display: none;
+  }
+
+  @include for-size(desktop) {
+    display: block;
+  }
+}
+
+.what-we-do-list {
+  display: flex;
+}
+
+.what-we-do-item {
+  position: relative;
+  width: calc((100% - 30px * 2) / 3);
+  height: 294px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.what-we-do-text {
+  @include centreflex();
+
+  width: 370px;
+  height: 70px;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  color: $main-white-color;
+  background: rgba(47, 48, 58, 0.8);
+}

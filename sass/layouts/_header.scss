@@ -1,0 +1,14 @@
+.header-page {
+  position: relative;
+
+  @include for-size(desktop) {
+    // display: flex;
+  }
+
+  // display: flex;
+  // border: 1px solid #ececec;
+
+  @include for-size(tablet-portrait) {
+    position: relative;
+  }
+}

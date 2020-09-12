@@ -1,0 +1,126 @@
+.benefits {
+  padding-bottom: 0;
+
+  @include for-size(tablet-landscape) {
+    padding-bottom: 60px;
+  }
+
+  @include for-size(desktop) {
+    padding-bottom: 90px;
+  }
+
+  &-list {
+    @include for-size(desktop) {
+      display: flex;
+      align-items: baseline;
+    }
+
+    @include for-size(tablet-landscape) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-item {
+    @include for-size(phone-only) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    @include for-size(tablet-portrait) {
+      width: 100%;
+    }
+
+    @include for-size(tablet-landscape) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @include for-size(desktop) {
+      width: calc((100% - 30px * 3) / 4);
+    }
+  }
+
+  &-item:not(:last-child) {
+    @include for-size(desktop) {
+      margin-right: 30px;
+    }
+  }
+
+  &-item:nth-child(-n + 2) {
+    @include for-size(tablet-landscape) {
+      margin-bottom: 30px;
+    }
+
+    @include for-size(desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &-item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+
+  &-title {
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    @include for-size(phone-only) {
+      text-align: center;
+    }
+
+    @include for-size(tablet-portrait) {
+      text-align: center;
+    }
+
+    @include for-size(tablet-landscape) {
+      text-align: left;
+    }
+  }
+}
+
+.benefits-item::before {
+  display: block;
+  content: " ";
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include for-size(phone-only) {
+    width: 100%;
+  }
+
+  @include for-size(tablet-portrait) {
+    width: 100%;
+  }
+}
+
+.benefits-item.item-details::before {
+  background-image: url("../img/icons/details.svg");
+}
+
+.benefits-item.item-punctual::before {
+  background-image: url("../img/icons/punctual.svg");
+}
+
+.benefits-item.item-planing::before {
+  background-image: url("../img/icons/planing.svg");
+}
+
+.benefits-item.item-technology::before {
+  background-image: url("../img/icons/technology.svg");
+}
+
+.benefits-title,
+.names {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+
+  color: $dark-text-color;
+}

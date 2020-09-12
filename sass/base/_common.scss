@@ -1,0 +1,119 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+
+  background-color: $main-white-color;
+  color: $main-text-color;
+
+  margin: 0px;
+}
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include for-size(tablet-portrait) {
+    width: 480px;
+  }
+
+  @include for-size(tablet-landscape) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1200px;
+  }
+}
+
+.pf-container {
+  margin-bottom: 40px;
+
+  @include for-size(tablet-landscape) {
+    margin-bottom: 0;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+section {
+  @include for-size(phone-only) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include for-size(tablet-portrait) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $dark-text-color;
+
+  @include for-size(phone-only) {
+    padding-bottom: 35px;
+  }
+
+  @include for-size(tablet-portrait) {
+    padding-bottom: 35px;
+  }
+
+  @include for-size(desktop) {
+    padding-bottom: 60px;
+
+    font-size: 36px;
+  }
+}
+
+.main-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+}
+
+h2,
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
