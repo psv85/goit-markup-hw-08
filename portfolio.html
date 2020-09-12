@@ -469,11 +469,36 @@
             <li class="projects-list-item">
               <a href="#" aria-label="Growing Business" class="project-link">
                 <div class="portfolio-box">
-                  <img
-                    src="./portfolioimg/app3.jpg"
-                    alt="Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img_respons/projects/pr9-des/img.jpg    1x,
+                        ./img_respons/projects/pr9-des/img@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./img_respons/projects/pr9-tab/img.jpg    1x,
+                        ./img_respons/projects/pr9-tab/img@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img_respons/projects/pr9-mob/img.jpg    1x,
+                        ./img_respons/projects/pr9-mob/img@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./img_respons/projects/pr9-mob/img.jpg"
+                      alt="Технокряк"
+                      width="450"
+                    />
+                  </picture>
+
                   <p class="text-portfolio-box">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
